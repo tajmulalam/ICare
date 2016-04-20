@@ -15,14 +15,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     // TODO: 20-4-16 All Table Names here
 
-    static final String TABLE_USER = "userTable";
-    static final String TABLE_DIET = "dietTable";
-    static final String TABLE_GENERAL_INFO = "generalInfoTable";
-    static final String TABLE_VACCINE = "vaccineTable";
-    static final String TABLE_DOCTOR = "doctorTable";
-    static final String TABLE_MEDICAL_HISTORY = "medicalHistoryTable";
-    static final String TABLE_HOSPITAL = "hospitalTable";
-    static final String TABLE_NOTE = "noteTable";
+    public static final String TABLE_USER = "userTable";
+    public static final String TABLE_DIET = "dietTable";
+    public static final String TABLE_GENERAL_INFO = "generalInfoTable";
+    public static final String TABLE_VACCINE = "vaccineTable";
+    public static final String TABLE_DOCTOR = "doctorTable";
+    public static final String TABLE_MEDICAL_HISTORY = "medicalHistoryTable";
+    public static final String TABLE_HOSPITAL = "hospitalTable";
+    public static final String TABLE_NOTE = "noteTable";
 
 
     // TODO: 20-4-16 tableUser column names
@@ -44,53 +44,53 @@ public class DBHelper extends SQLiteOpenHelper {
     static final String DIET_STATE_KEY = "status";
 
     // TODO: 20-4-16  GeneralInfoTable column names
-    static final String GENERAL_INFO_ID_KEY = "info_id";
-    static final String GENERAL_INFO_TITLE_KEY = "info_title";
-    static final String GENERAL_INFO_DESCRIPTION_KEY = "info_description";
-    static final String GENERAL_INFO_COLLECTED_FROM_KEY = "collected_from";
+    public static final String GENERAL_INFO_ID_KEY = "info_id";
+    public static final String GENERAL_INFO_TITLE_KEY = "info_title";
+    public static final String GENERAL_INFO_DESCRIPTION_KEY = "info_description";
+    public static final String GENERAL_INFO_COLLECTED_FROM_KEY = "collected_from";
 
 
     // TODO: 20-4-16  VaccineTable column names
-    static final String VACCINE_ID_KEY = "vaccine_id";
-    static final String VACCINE_NAME_KEY = "vaccine_name";
-    static final String VACCINE_DATE_KEY = "vaccine_date";
-    static final String VACCINE_DETAILS_KEY = "vaccine_details";
-    static final String VACCINE_STATE_KEY = "status";
+    public static final String VACCINE_ID_KEY = "vaccine_id";
+    public static final String VACCINE_NAME_KEY = "vaccine_name";
+    public  static final String VACCINE_DATE_KEY = "vaccine_date";
+    public static final String VACCINE_DETAILS_KEY = "vaccine_details";
+    public static final String VACCINE_STATE_KEY = "status";
 
 
     // TODO: 20-4-16 DoctorTable column names
 
-    static final String DOCTOR_ID_KEY = "doctor_id";
-    static final String DOCTOR_NAME_KEY = "doctor_name";
-    static final String DOCTOR_DETAILS_KEY = "doctor_details";
-    static final String DOCTOR_APPOINTMENT_KEY = "appointment";
-    static final String DOCTOR_PHONE_KEY = "phone";
-    static final String DOCTOR_EMAIL_KEY = "email";
+    public static final String DOCTOR_ID_KEY = "doctor_id";
+    public static final String DOCTOR_NAME_KEY = "doctor_name";
+    public static final String DOCTOR_DETAILS_KEY = "doctor_details";
+    public static final String DOCTOR_APPOINTMENT_KEY = "appointment";
+    public static final String DOCTOR_PHONE_KEY = "phone";
+    public static final String DOCTOR_EMAIL_KEY = "email";
 
     // TODO: 20-4-16 MedicalHistoryTable column names
 
-    static final String MEDICAL_HISTORY_ID_KEY = "history_id";
-    static final String MEDICAL_HISTORY_PHOTO_KEY = "photo";
-    static final String MEDICAL_HISTORY_DOCTOR_NAME_KEY = "doctor_name";
-    static final String MEDICAL_HISTORY_DETAILS_KEY = "details";
-    static final String MEDICAL_HISTORY_DATE_KEY = "history_date";
+    public static final String MEDICAL_HISTORY_ID_KEY = "history_id";
+    public static final String MEDICAL_HISTORY_PHOTO_KEY = "photo";
+    public static final String MEDICAL_HISTORY_DOCTOR_NAME_KEY = "doctor_name";
+    public static final String MEDICAL_HISTORY_DETAILS_KEY = "details";
+    public static final String MEDICAL_HISTORY_DATE_KEY = "history_date";
 
 
     // TODO: 20-4-16 HospitalsTable column names
 
-    static final String HOSPITAL_ID_KEY = "hospital_id";
-    static final String HOSPITAL_NAME_KEY = "hospital_name";
-    static final String HOSPITAL_ADDRESS_KEY = "hospital_address";
-    static final String HOSPITAL_LATITUDE_KEY = "hospital_latitude";
-    static final String HOSPITAL_LONGITUDE_KEY = "hospital_longitude";
-    static final String HOSPITAL_PHONE_KEY = "hospital_phone";
-    static final String HOSPITAL_WEBSITE_KEY = "hospital_website";
+    public static final String HOSPITAL_ID_KEY = "hospital_id";
+    public static final String HOSPITAL_NAME_KEY = "hospital_name";
+    public static final String HOSPITAL_ADDRESS_KEY = "hospital_address";
+    public static final String HOSPITAL_LATITUDE_KEY = "hospital_latitude";
+    public static final String HOSPITAL_LONGITUDE_KEY = "hospital_longitude";
+    public static final String HOSPITAL_PHONE_KEY = "hospital_phone";
+    public static final String HOSPITAL_WEBSITE_KEY = "hospital_website";
 
     // TODO: 20-4-16 NoteTable column names
 
-    static final String NOTE_ID_KEY = "note_id";
-    static final String NOTE_DATE_KEY = "note_date";
-    static final String NOTE_DESCRIPTION_KEY = "note_description";
+    public static final String NOTE_ID_KEY = "note_id";
+    public static final String NOTE_DATE_KEY = "note_date";
+    public static final String NOTE_DESCRIPTION_KEY = "note_description";
 
     // TODO: 20-4-16 UserTable create statement
 
@@ -125,7 +125,6 @@ public class DBHelper extends SQLiteOpenHelper {
             + " DATETIME," + DIET_STATE_KEY + " INTEGER, " + USER_ID_KEY + " INTEGER," + " FOREIGN KEY( " + USER_ID_KEY + " ) REFERENCES " + TABLE_USER + " ( " + USER_ID_KEY + " ) ON DELETE CASCADE" + ")";
 
 
-
     // TODO: 20-4-16 VaccineTable Create Statement
 
     private static final String CREATE_TABLE_VACCINE = "CREATE TABLE "
@@ -133,12 +132,11 @@ public class DBHelper extends SQLiteOpenHelper {
             + " TEXT," + VACCINE_DATE_KEY + " DATETIME," + VACCINE_DETAILS_KEY + " TEXT," + VACCINE_STATE_KEY + " INTEGER, " + USER_ID_KEY + " INTEGER," + " FOREIGN KEY( " + USER_ID_KEY + " ) REFERENCES " + TABLE_USER + " ( " + USER_ID_KEY + " ) ON DELETE CASCADE" + ")";
 
 
-
     // TODO: 20-4-16 DoctorTable Create Statement
 
     private static final String CREATE_TABLE_DOCTOR = "CREATE TABLE "
             + TABLE_DOCTOR + "(" + DOCTOR_ID_KEY + " INTEGER PRIMARY KEY," + DOCTOR_NAME_KEY
-            + " TEXT," + DOCTOR_DETAILS_KEY + " TEXT," + DOCTOR_APPOINTMENT_KEY + " DATETIME," + DOCTOR_PHONE_KEY + " TEXT, " +DOCTOR_EMAIL_KEY +" TEXT," + USER_ID_KEY + " INTEGER," + " FOREIGN KEY( " + USER_ID_KEY + " ) REFERENCES " + TABLE_USER + " ( " + USER_ID_KEY + " ) ON DELETE CASCADE" + ")";
+            + " TEXT," + DOCTOR_DETAILS_KEY + " TEXT," + DOCTOR_APPOINTMENT_KEY + " DATETIME," + DOCTOR_PHONE_KEY + " TEXT, " + DOCTOR_EMAIL_KEY + " TEXT," + USER_ID_KEY + " INTEGER," + " FOREIGN KEY( " + USER_ID_KEY + " ) REFERENCES " + TABLE_USER + " ( " + USER_ID_KEY + " ) ON DELETE CASCADE" + ")";
 
 
     // TODO: 20-4-16 MedicalHistoryTable Create Statement
@@ -146,9 +144,6 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String CREATE_TABLE_MEDICAL_HISTORY = "CREATE TABLE "
             + TABLE_MEDICAL_HISTORY + "(" + MEDICAL_HISTORY_ID_KEY + " INTEGER PRIMARY KEY," + MEDICAL_HISTORY_PHOTO_KEY
             + " TEXT," + MEDICAL_HISTORY_DOCTOR_NAME_KEY + " TEXT," + MEDICAL_HISTORY_DETAILS_KEY + " TEXT," + MEDICAL_HISTORY_DATE_KEY + " DATETIME," + USER_ID_KEY + " INTEGER," + " FOREIGN KEY( " + USER_ID_KEY + " ) REFERENCES " + TABLE_USER + " ( " + USER_ID_KEY + " ) ON DELETE CASCADE" + ")";
-
-
-
 
 
     public DBHelper(Context context) {

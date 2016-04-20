@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ICare</string>
+    <string name="btn_save">Save</string>
 </resources>

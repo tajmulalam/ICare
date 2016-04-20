@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.project.droidbabies.icare.generalinformation.GeneralInformationManager;
+import com.project.droidbabies.icare.generalinformation.GeneralInformationModel;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
