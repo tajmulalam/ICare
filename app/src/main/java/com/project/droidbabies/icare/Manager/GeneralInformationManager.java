@@ -1,10 +1,14 @@
-package com.project.droidbabies.icare;
+package com.project.droidbabies.icare.Manager;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.project.droidbabies.icare.Helper.DBHelper;
+import com.project.droidbabies.icare.Model.GeneralInformationModel;
+
 import java.util.ArrayList;
+
 
 /**
  * Created by Mobile App Develop on 20-4-16.

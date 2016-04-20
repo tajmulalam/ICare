@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.project.droidbabies.icare.AddProfileActivity">
+    tools:context=".Activity.AddProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

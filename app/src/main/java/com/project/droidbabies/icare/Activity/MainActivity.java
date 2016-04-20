@@ -1,4 +1,4 @@
-package com.project.droidbabies.icare;
+package com.project.droidbabies.icare.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.project.droidbabies.icare.generalinformation.GeneralInformationManager;
-import com.project.droidbabies.icare.generalinformation.GeneralInformationModel;
+import com.project.droidbabies.icare.Manager.GeneralInformationManager;
+import com.project.droidbabies.icare.Model.GeneralInformationModel;
+import com.project.droidbabies.icare.R;
 
 import java.util.ArrayList;
 

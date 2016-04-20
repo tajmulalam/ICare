@@ -1,4 +1,4 @@
-package com.project.droidbabies.icare;
+package com.project.droidbabies.icare.Model;
 
 /**
  * Created by Mobile App Develop on 20-4-16.
