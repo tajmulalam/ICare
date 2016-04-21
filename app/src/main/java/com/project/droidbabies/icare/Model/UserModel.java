@@ -1,26 +1,48 @@
 package com.project.droidbabies.icare.Model;
 
 /**
- * Created by sajidMacPro on 4/21/16.
+ * Created by Sumon on 4/21/2016.
  */
 public class UserModel {
-    private int userId;
-    private String age,bloodGroup,majorDisease,hieght,weight;
+    private int user_id;
+    private String fullName;
+    private String age;
+    private String bloodGroup;
+    private String majorDisease;
+    private String height;
+    private String weight;
 
-    public UserModel(int userId, String age, String bloodGroup,
-                     String majorDisease, String hieght, String weight) {
-        this.userId = userId;
+    public UserModel(int user_id, String fullName, String age, String bloodGroup,
+                     String majorDisease, String height, String weight) {
+        this.user_id = user_id;
+        this.fullName = fullName;
         this.age = age;
         this.bloodGroup = bloodGroup;
         this.majorDisease = majorDisease;
-        this.hieght = hieght;
+        this.height = height;
         this.weight = weight;
     }
 
-    public int getUserId() {
-        return userId;
+    public UserModel(String fullName, String age, String bloodGroup, String majorDisease, String height, String weight) {
+        this.fullName = fullName;
+        this.age = age;
+        this.bloodGroup = bloodGroup;
+        this.majorDisease = majorDisease;
+        this.height = height;
+        this.weight = weight;
     }
 
+    public UserModel() {
+
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 
     public String getAge() {
         return age;
@@ -46,12 +68,12 @@ public class UserModel {
         this.majorDisease = majorDisease;
     }
 
-    public String getHieght() {
-        return hieght;
+    public String getHeight() {
+        return height;
     }
 
-    public void setHieght(String hieght) {
-        this.hieght = hieght;
+    public void setHeight(String height) {
+        this.height = height;
     }
 
     public String getWeight() {
@@ -62,3 +84,4 @@ public class UserModel {
         this.weight = weight;
     }
 }
+

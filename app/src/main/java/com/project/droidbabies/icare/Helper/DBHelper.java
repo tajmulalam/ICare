@@ -26,22 +26,23 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     // TODO: 20-4-16 tableUser column names
-    static final String USER_ID_KEY = "user_id";
-    static final String USER_AGE_KEY = "age";
-    static final String USER_BLOOD_GROUP_KEY = "blood_group";
-    static final String USER_MAJOR_DISEASE_KEY = "major_disease";
-    static final String USER_HEIGHT_KEY = "height";
-    static final String USER_WEIGHT_KEY = "weight";
+    public static final String USER_ID_KEY = "user_id";
+    public static final String USER_FULL_NAME_KEY = "user_full_name";
+    public static final String USER_AGE_KEY = "age";
+    public static final String USER_BLOOD_GROUP_KEY = "blood_group";
+    public static final String USER_MAJOR_DISEASE_KEY = "major_disease";
+    public static final String USER_HEIGHT_KEY = "height";
+    public static final String USER_WEIGHT_KEY = "weight";
 
 
     // TODO: 20-4-16  DietTable column names
 
-    static final String DIET_ID_KEY = "diet_id";
-    static final String DIET_TYPE_KEY = "diet_type";
-    static final String DIET_MENU_KEY = "menu";
-    static final String DIET_DATE_KEY = "diet_date";
-    static final String DIET_TIME_KEY = "diet_time";
-    static final String DIET_STATE_KEY = "status";
+    public static final String DIET_ID_KEY = "diet_id";
+    public static final String DIET_TYPE_KEY = "diet_type";
+    public static final String DIET_MENU_KEY = "menu";
+    public static final String DIET_DATE_KEY = "diet_date";
+    public static final String DIET_TIME_KEY = "diet_time";
+    public static final String DIET_STATE_KEY = "status";
 
     // TODO: 20-4-16  GeneralInfoTable column names
     public static final String GENERAL_INFO_ID_KEY = "info_id";
@@ -95,7 +96,7 @@ public class DBHelper extends SQLiteOpenHelper {
     // TODO: 20-4-16 UserTable create statement
 
     private static final String CREATE_TABLE_USER = "CREATE TABLE " + TABLE_USER
-            + "(" + USER_ID_KEY + " INTEGER PRIMARY KEY," + USER_AGE_KEY + " TEXT,"
+            + "(" + USER_ID_KEY + " INTEGER PRIMARY KEY," + USER_AGE_KEY + " DATETIME,"+USER_FULL_NAME_KEY +" TEXT, "
             + USER_BLOOD_GROUP_KEY + " TEXT," + USER_MAJOR_DISEASE_KEY + " TEXT," + USER_HEIGHT_KEY + " TEXT," + USER_WEIGHT_KEY + " TEXT " + ")";
 
     // TODO: 20-4-16   GeneralInfoTable create statement
@@ -195,3 +196,4 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 }
+

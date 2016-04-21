@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.AddProfileActivity"></activity>
+        <activity android:name=".Activity.GeneralInfoActivity"/>
+        <activity android:name=".Activity.AddProfileActivity"/>
     </application>
 
 </manifest>

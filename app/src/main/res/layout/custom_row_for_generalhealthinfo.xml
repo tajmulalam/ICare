@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/infoTitleTV"
+        android:text="Bacchak Khaowao"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <TextView
+        android:text="The listener you add to the enter transition is triggered when the window transition ends, which you use to fade in the FAB button. For this to be effective, set the alpha to 0 for the FAB in activity_detail.xml. Find the ImageButton with a an id of btn_add and add the following to its declaration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/infoDescriptionTV"
+       />
+    <TextView
+        android:text="Collected From: http://sqare.com"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/infocollectedFromTV"/>
+</LinearLayout>
